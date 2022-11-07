@@ -1,0 +1,1842 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E2E2E2;
+}
+
+/******* MyFonts *******/
+@font-face {
+    font-family: 'Caveat Brush';
+    src: url(../fonts/CaveatBrush/CaveatBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/* loader */
+.bg-loader {
+    background-color: rgb(235, 235, 235);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-loader .loader {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    border-top-color: rgb(184, 114, 48);
+    border-right-color: rgb(184, 114, 48);
+    animation: muter 1s linear infinite;
+}
+
+@keyframes muter {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ====navigation===== */
+.bg-blur {
+    background-color: #18171671;
+}
+
+.navbar {
+    height: 65px;
+}
+
+
+.navbar-toggler {
+    background-color: #E8B981;
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: 50px;
+}
+
+.nav-link {
+    margin-left: 18px;
+    text-align: center;
+    text-transform: none;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgb(63, 63, 63);
+}
+
+.nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #F6E0BE;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -7px;
+}
+
+.now::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #F6E0BE;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -7px;
+}
+
+nav.sticky {
+    background-color: #181716;
+    height: 60px;
+    margin-top: -5px;
+    transition: 1s;
+}
+
+nav.sticky img {
+    width: 100px;
+    height: 40px;
+}
+
+.shop {
+    margin-right: 10px;
+    text-align: center;
+    margin-left: 8px;
+    width: 100%;
+    color: rgba(252, 227, 216, 0.856);
+}
+
+.btn-outline-light {
+    width: 260px;
+}
+
+#navbarNav {
+    background-color: #18171671;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .nav-link {
+        text-transform: uppercase;
+    }
+
+    .bg-blur {
+        background-color: rgba(37, 37, 37, 0);
+    }
+
+    .navbar {
+        display: flex;
+        height: 100px;
+    }
+
+    .shop {
+        width: 0;
+        color: rgba(253, 220, 206, 0.952);
+        margin-left: 25px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    #navbarNav {
+        background-color: transparent;
+    }
+
+    .btn-outline-light {
+        width: 50px;
+    }
+
+}
+
+/* ====akhir navbar==== */
+
+
+/* utility */
+.btn-tombol {
+    text-transform: uppercase;
+    background: #E8B981;
+    color: #000;
+    border-radius: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+
+/* =============== HOME PAGES ================ */
+
+/* ====Jumbotron==== */
+.jumbotron-home {
+    background: linear-gradient(0deg, rgba(30, 24, 19, 0.8), rgba(30, 24, 19, 0.8)), url(../img/fotolatar.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    margin-top: -95px;
+
+}
+
+.jumbotron-home .display-4 {
+    margin-top: 250px;
+    color: #FCE1C7;
+    width: auto;
+    height: 171px;
+    text-shadow: 2px 2px 4px rgb(26, 25, 25);
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 180px;
+    text-align: center;
+}
+
+.jumbotron-home .lead {
+    height: 41.74px;
+    font-family: Roboto;
+    text-align: center;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.jumbotron a {
+    text-decoration: none;
+}
+
+.display-4:hover {
+    transform: translateY(9px);
+    transition: 0.8s;
+}
+
+.lead:hover {
+    transform: translateY(5px);
+    transition: 0.7s;
+}
+
+.jumbotron-home .ikon img {
+    margin-top: 140px;
+    width: 50px;
+}
+
+.ikon img:active {
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+/* ====akhir jumbotron==== */
+
+/* ====Container==== */
+/* halaman 1 */
+#hal1 {
+    width: auto;
+    height: 710px;
+    position: relative;
+}
+
+
+.kotak {
+    margin: auto;
+    border: 3px solid rgba(0, 0, 0, 0.84);
+    box-sizing: border-box;
+    width: 130px;
+    height: 130px;
+    box-shadow: 2px 2px 10px rgb(92, 91, 91);
+    margin-top: 50px;
+}
+
+.kotak:hover {
+    transform: translateY(7px);
+    transition: 0.5s;
+}
+
+.kotak img {
+    width: 75px;
+    height: 75px;
+    margin-left: 24px;
+    margin-top: 19px;
+}
+
+
+.kotak p {
+    visibility: hidden;
+}
+
+
+.tombol {
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgb(80, 80, 80);
+    margin-bottom: 54px;
+    font-size: 15px;
+}
+
+#hal1 h4 {
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+    margin-top: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Desktop version */
+@media (min-width: 992px) {
+    .kotak {
+        margin: auto;
+        width: 160px;
+        height: 160px;
+        margin-top: 120px;
+
+    }
+
+    .kotak img {
+        width: 100px;
+        height: 100px;
+        margin-left: 28px;
+        margin-top: 20px;
+    }
+
+    #hal1 h4 {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 70px;
+        font-size: 38px;
+        float: none;
+    }
+
+    .kotak p {
+        visibility: inherit;
+        width: auto;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 45px;
+        padding-left: 4px;
+    }
+
+    .tombol {
+        margin: auto;
+        margin-top: 180px;
+        margin-left: 44%;
+        width: 130px;
+        height: 56px;
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgb(31, 29, 29);
+        margin-bottom: 54px;
+        font-size: 18px;
+    }
+
+}
+
+
+/* halaman 2 */
+#hal2 {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 710px;
+    position: relative;
+}
+
+.foto {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)), url(../img/blendkopi.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 200px;
+    height: 511px;
+    margin-top: 100px;
+    float: right;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.balok {
+    position: relative;
+    width: 200px;
+    height: 511px;
+    margin-top: 120px;
+    background-color: #f5e0d98c;
+}
+
+/* Phone version */
+@media (min-width: 576px) {
+    .balok {
+        margin-left: 65%;
+    }
+}
+
+.caption h2 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 30px;
+    float: left;
+    margin-top: -130px;
+}
+
+.caption p {
+    margin-top: -350px;
+    color: #ffffff;
+    font-size: 15px;
+    width: 300px;
+    height: 153px;
+}
+
+.but {
+    width: 140px;
+    height: 54px;
+    padding: 14px;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+/* Desktop version */
+@media (min-width: 992px) {
+    .foto {
+        width: 450px;
+        height: 511px;
+        margin-right: 35px;
+        margin-top: 100px;
+        float: right;
+    }
+
+    .balok {
+        width: 450px;
+        height: 511px;
+        margin-left: 58%;
+        margin-top: 120px;
+    }
+
+    .caption h2 {
+        font-size: 48px;
+        float: left;
+        margin-top: -130px;
+    }
+
+    .caption p {
+        margin-top: -350px;
+        font-size: 20px;
+        width: 389.52px;
+        height: 153.2px;
+    }
+
+    .but {
+        width: 180px;
+        height: 54px;
+        padding: 12px;
+        font-size: 18px;
+        margin-top: 60px;
+    }
+}
+
+/* halaman 3 */
+#hal3 {
+    height: 710px;
+    position: relative;
+}
+
+.foto-1 {
+    width: 200px;
+    height: 544px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url(../img/kopi.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    margin-left: 25px;
+
+}
+
+.balok-1 {
+    position: relative;
+    width: 200px;
+    height: 544px;
+    background-color: rgba(88, 76, 73, 0.31);
+    margin-top: -520px;
+    z-index: -1;
+}
+
+.caption-1 h2 {
+    text-transform: uppercase;
+    color: #1B1616;
+    font-size: 30px;
+    float: right;
+    font-weight: 700;
+    margin-top: -520px;
+}
+
+.caption-1 p {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    width: 240px;
+    height: 279px;
+    float: right;
+    text-align: right;
+    margin-top: -400px;
+}
+
+.but-1 {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    padding: 7px;
+    float: right;
+    margin-top: -150px;
+    box-shadow: 0px 3px 8px 1px #2D2D2D;
+}
+
+/* Desktop version */
+@media (min-width: 992px) {
+    .foto-1 {
+        width: 487px;
+        height: 544px;
+        margin-top: 100px;
+        margin-left: 25px;
+    }
+
+    .balok-1 {
+        width: 487px;
+        height: 544px;
+    }
+
+    .caption-1 h2 {
+        font-size: 48px;
+    }
+
+    .caption-1 p {
+        font-size: 20px;
+        width: 398px;
+        height: 279px;
+    }
+
+    .but-1 {
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+/* ====akhir container===== */
+
+/* ================ END HOME PAGES ================== */
+
+
+
+/* ================= MENU PAGES ===================== */
+
+/* ====Jumbotron drink==== */
+
+.jumbotron-menu {
+    background: linear-gradient(0deg, rgba(233, 233, 233, 0.58), rgba(233, 233, 233, 0.58)), url(../img/fotolatar2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    margin-bottom: -50px;
+    position: relative;
+}
+
+.jumbotron-menu .display-menu {
+    margin-top: 190px;
+    width: auto;
+    height: 100px;
+    text-transform: uppercase;
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.jumbotron-menu .lead-menu {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 45px;
+    text-align: center;
+    color: #231F1F;
+}
+
+
+.display-menu:hover {
+    transform: translateY(9px);
+    transition: 0.9s;
+}
+
+.lead-menu:hover {
+    transform: translateY(4px);
+    transition: 0.6s;
+}
+
+.jumbotron-menu .ikon-2 img {
+    margin-top: 170px;
+    width: 60px;
+}
+
+.ikon-2 img:active {
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .jumbotron-menu .display-menu {
+        font-size: 100px;
+        height: 120px;
+    }
+
+    .jumbotron-menu .lead-menu {
+        font-size: 36px;
+    }
+}
+
+/* ====akhir jumbotron==== */
+
+/* ===menu coffe=== */
+#page1 {
+    width: 0 auto;
+    height: 800px;
+    background-color: #2D2D2D;
+    position: relative;
+}
+
+.kopi {
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.kopi h4 {
+    font-family: roboto;
+    color: white;
+    font-size: 12px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.849);
+    padding: 6px;
+}
+
+.kopi:hover {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.kopi1 {
+    background-image: url(../img/hitam.png);
+}
+
+.kopi2 {
+    background-image: url(../img/cappucino.png);
+}
+
+.kopi3 {
+    background-image: url(../img/latte.png);
+}
+
+.kopi4 {
+    background-image: url(../img/machalatte.png);
+}
+
+.kopi5 {
+    background-image: url(../img/espresso.png);
+}
+
+.kopi6 {
+    background-image: url(../img/mocha.png);
+}
+
+.menu-text {
+    width: auto;
+    text-transform: uppercase;
+    font-family: roboto-bold;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 85px;
+    color: #E2E1E1;
+}
+
+.menu-text::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #D1CDCD;
+    width: 170px;
+    margin: auto;
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .kopi {
+        width: 250px;
+        height: 166px;
+        margin-top: 80px;
+        margin-left: 50px;
+        border-radius: 20px;
+    }
+
+    .kopi h4 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .menu-text {
+        font-size: 60px;
+        text-align: center;
+        padding-top: 85px;
+        margin-bottom: 50px;
+    }
+
+    .menu-text::after {
+        width: 250px;
+        padding-top: 10px;
+        margin-bottom: -70px;
+    }
+}
+
+/* ===akhir menu coffe=== */
+
+
+/* ==jumbotron menu== */
+.jumbotron-food {
+    position: relative;
+    height: 800px;
+    background-image: linear-gradient(0deg, rgba(233, 233, 233, 0.46), rgba(233, 233, 233, 0.46)), url(../img/fotolatar3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: -50px;
+}
+
+.jumbotron-food .display-4 {
+    margin-top: 190px;
+    width: auto;
+    height: 126px;
+    text-transform: uppercase;
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.jumbotron-food .lead {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    color: #231F1F;
+
+}
+
+.jumbotron-food .ikon img {
+    margin-top: 170px;
+    width: 60px;
+}
+
+/* Desktop version */
+@media (min-width: 992px) {
+    .jumbotron-food .display-4 {
+        font-size: 100px;
+    }
+
+    .jumbotron-food .lead {
+        font-size: 38px;
+    }
+}
+
+/* === Food  Menu === */
+#page2 {
+    width: auto;
+    height: 800px;
+    background-color: #2D2D2D;
+    position: relative;
+}
+
+#page2 .col {
+    margin-left: ;
+}
+
+.food {
+    margin: auto;
+    width: auto;
+    height: 200px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
+.food:hover {
+    transform: translateY(9px);
+    transition: 0.8s;
+}
+
+.food1 {
+    background-image: url(../img/cookes.png);
+}
+
+.food2 {
+    background-image: url(../img/donat.jpg);
+}
+
+.food3 {
+    background-image: url(../img/pie\ susu.jpg);
+}
+
+.food4 {
+    background-image: url(../img/sumping.jpg);
+}
+
+.food5 {
+    background-image: url(../img/laklak.jpg);
+}
+
+.food6 {
+    background-image: url(../img/pisang\ rai.jpg);
+}
+
+.text-food-1 {
+    width: auto;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 38px;
+    line-height: 56px;
+    text-align: center;
+    color: #E2E1E1;
+}
+
+.text-food-2 {
+    width: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 38px;
+    line-height: 56px;
+    text-align: center;
+    color: #E2E1E1;
+}
+
+#page2 h4 {
+    font-family: roboto;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.849);
+    padding: 8px;
+}
+
+/* desktop version */
+@media (min-width: 992px) {
+    .food {
+        width: 250px;
+        height: 160px;
+        margin-left: 30px;
+    }
+
+    #page2 h4 {
+        font-weight: 600;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .text-food-1,
+    .text-food-2 {
+        font-size: 48px;
+    }
+
+    #page2 .col {
+        margin-left: 2%;
+    }
+}
+
+/* ===akhir Food menu=== */
+
+
+/* ======== END MENU PAGES ========= */
+
+
+/*  ======== ABOUT PAGES ==========*/
+
+/* =====jumbotron===== */
+.jumbotron-bout {
+    width: auto;
+    height: 800px;
+    background-image: linear-gradient(0deg, rgba(65, 62, 62, 0.54), rgba(65, 62, 62, 0.54)), url(../img/latarbout.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.jumbotron-bout .display-4 {
+    width: auto;
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 204px;
+    color: #E7E7E7;
+}
+
+.jumbotron-bout .lead {
+    margin: auto;
+    width: auto;
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+/* ===akhir jumbotron=== */
+
+/* ===page1 about===*/
+#about-1 {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+#about-1 h4 {
+    margin-top: 150px;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: Roboto-bold;
+    text-align: center;
+    color: #000000;
+}
+
+#about-1 p {
+    margin: auto;
+    width: auto;
+    margin-top: 20px;
+    font-family: Roboto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.fotobout {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    width: 130px;
+    height: 131px;
+}
+
+.fotobout:hover {
+    transform: rotateY(360deg);
+    transition: 0.9s;
+}
+
+.bout-1 {
+    background-image: url(../img/icon-coffee1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bout-2 {
+    background-image: url(../img/icon-coffee2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bout-3 {
+    background-image: url(../img/icon-coffee3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bout-text {
+    margin-top: 20px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+
+
+/* ===page2 about=== */
+#about-2 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(33, 30, 30, 0.72), rgba(33, 30, 30, 0.72)), url(../img/fotolatar5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fotologo {
+    margin: auto;
+    margin-top: 12px;
+    width: 300px;
+    height: 100px;
+    background-image: url(../img/logocoffe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+}
+
+.p {
+    padding-bottom: 130px;
+}
+
+.line1 {
+    margin: auto;
+    width: 500px;
+    height: 265px;
+    border: 8px solid rgba(226, 226, 226, 0.15);
+    box-sizing: border-box;
+}
+
+.line2 {
+    margin: auto;
+    margin-top: 23px;
+    width: 430px;
+    height: 198px;
+    border: 8px solid rgba(226, 226, 226, 0.5);
+    box-sizing: border-box;
+}
+
+.line3 {
+    margin: auto;
+    margin-top: 23px;
+    width: 360px;
+    height: 139px;
+    border: 8px solid rgba(226, 226, 226, 0.85);
+    box-sizing: border-box;
+}
+
+/* ===page3 about==== */
+#about-3 {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+
+#about-3 h2 {
+    margin-top: 100px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.middle {
+    margin: auto;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slidershow {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.nav-galery {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 50px;
+    height: 15px;
+    border: 2px solid #ffffff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background-color: #ffffff;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#r5:checked~.s1 {
+    margin-left: -80%;
+}
+
+.galeri-1 {
+    margin-top: 500px;
+    background-image: url(../img/foto3.jpg);
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 350px;
+}
+
+.galeri-2 {
+    margin-top: 500px;
+    width: auto;
+    height: 350px;
+    background-image: url(../img/kopi2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    #about-1 {
+        height: 710px;
+    }
+
+    .jumbotron-bout .display-4 {
+        font-size: 100px;
+    }
+
+    .jumbotron-bout .lead {
+        width: 600px;
+        font-size: 24px;
+    }
+
+    #about-1 h4 {
+        margin-top: 250px;
+        font-size: 38px;
+    }
+
+    #about-1 p {
+        margin: auto;
+        width: 700px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .fotobout {
+        margin: auto;
+        margin-top: 100px;
+        width: 160px;
+        height: 161px;
+    }
+
+    .line1 {
+        width: 600px;
+        height: 365px;
+    }
+
+    .line2 {
+        width: 530px;
+        height: 298px;
+    }
+
+    .line3 {
+        width: 460px;
+        height: 239px;
+    }
+
+    .fotologo {
+        margin-top: 35px;
+        width: 400px;
+        height: 150px;
+    }
+
+    .slidershow {
+        width: 750px;
+        height: 400px;
+    }
+
+
+    #about-3 h2 {
+        margin-top: 110px;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 50px;
+    }
+
+    .middle {
+        margin: auto;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slidershow {
+        width: 780px;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    .nav-galery {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    .bar {
+        width: 50px;
+        height: 15px;
+        border: 2px solid #ffffff;
+        margin: 6px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .galeri-1 {
+        margin-top: 110%;
+        width: 527px;
+        height: 307px;
+    }
+
+    .galeri-2 {
+        margin-top: 110%;
+        width: 527px;
+        height: 307px;
+    }
+
+}
+
+/* ======= AKHIR ABOUT PAGES ======== */
+
+
+
+
+
+/* ========= CONTACT PAGES =========== */
+
+/* ====Jumbotron==== */
+.jumbotron-contact {
+    width: 100%;
+    height: 800px;
+    background-image: linear-gradient(0deg, rgba(245, 245, 245, 0.58), rgba(245, 245, 245, 0.58)), url(../img/fotolatar4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.c {
+    padding-bottom: 230px;
+}
+
+.bingkai {
+    margin: auto;
+    width: 450px;
+    height: 190px;
+    border: 5px solid #4F4F4F;
+    box-sizing: border-box;
+    animation: ganti 10s reverse;
+}
+
+.jumbotron-contact .bingkai .display-4 {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    color: #2C2C2C;
+}
+
+
+
+@keyframes ganti {
+    from {
+        border: 5px solid #4F4F4F;
+    }
+
+    to {
+        border: 5px solid #83838300;
+    }
+}
+
+.jumbotron-contact .ikon-2 img {
+    margin-top: 200px;
+    width: 50px;
+}
+
+.ikon-2 img:active {
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+/* ===akhir jumbotron=== */
+
+/* =====container contact========*/
+#contact {
+    position: relative;
+    width: auto;
+    height: 3260px;
+    background-color: #2D2D2D;
+}
+
+.ikon-contact {
+    margin: auto;
+    margin-top: 230px;
+    text-align: center;
+}
+
+.text-contact {
+    padding-top: 30px;
+    color: #F9B464;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+.hp {
+    color: rgb(45, 177, 33);
+}
+
+.loc {
+    color: rgb(172, 38, 38);
+}
+
+.mail {
+    color: rgb(197, 194, 194);
+}
+
+.ikon-contact p {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+
+    color: #E2E1E1;
+}
+
+/* <<<<<Form Messages>>>>>>> */
+.judul {
+    margin-top: 260px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Roboto;
+    color: #F9B464;
+}
+
+.borderform {
+    margin: auto;
+    width: auto;
+    height: 700px;
+    box-sizing: border-box;
+    border: 4px solid #D2D2D2;
+}
+
+.textform {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    border: none;
+}
+
+.textform input {
+    width: auto;
+    height: 53px;
+    background: #474747;
+    color: #D2D2D2;
+    padding-left: 10px;
+}
+
+.pesanform {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.pesanform textarea {
+    width: auto;
+    height: 175px;
+    background: #474747;
+    color: #D2D2D2;
+    border: none;
+    padding-left: 10px;
+}
+
+.btnform {
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btnform input {
+    text-transform: uppercase;
+    width: 196px;
+    height: 53px;
+    color: #000;
+    font-weight: 500;
+    background: #F3C7B9;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.btnform input:hover {
+    color: rgb(32, 29, 29);
+    background: #f7a446;
+    border: none;
+    transition: 1s;
+}
+
+.btnform input:active {
+    transform: translateY(12px);
+    transition: 0.8s;
+}
+
+.m-sosial {
+    margin-top: 277px;
+    text-align: center;
+}
+
+.m-sosial h2 {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+    color: #F9B464;
+    margin-bottom: 50px;
+}
+
+.btn-linier {
+    background: linear-gradient(262.86deg, #7E41FF 3.4%, #E71B1B 50.27%, #ECB904 97.14%);
+    color: white;
+}
+
+.btn-linier:hover {
+    color: white;
+    background: linear-gradient(263deg, #7d41ffbe 3.4%, #e71b1bbe 50.27%, #ecba04c7 97.14%);
+}
+
+.m-sosial ul a {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+.logotext {
+    margin-top: 200px;
+    width: 450px;
+    height: 170px;
+}
+
+.sosmed-text {
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.sosmed-text a {
+    color: #fff;
+}
+
+/* footer contact */
+#footer-kontak {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #201d1d;
+}
+
+#footer-kontak .caps-footer-down {
+    margin-top: 40px;
+    float: none;
+    text-align: center;
+    padding-top: 35px;
+
+
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .bingkai {
+        margin: auto;
+        width: 562px;
+        height: 206px;
+    }
+
+    .jumbotron-contact .bingkai .display-4 {
+        font-size: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .jumbotron-contact .ikon-2 img {
+        margin-top: 166px;
+        width: 60px;
+    }
+
+    .text-contact {
+        font-weight: 700;
+    }
+
+    .ikon-contact p {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .judul {
+        font-size: 25px;
+    }
+
+    .borderform {
+        margin: auto;
+        width: 850px;
+        height: 700px;
+    }
+
+    .textform input {
+        width: 552px;
+        height: 53px;
+        padding-left: 10px;
+    }
+
+    .pesanform textarea {
+        width: 552px;
+        height: 175px;
+        padding-left: 10px;
+    }
+
+    .m-sosial h2 {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .logotext {
+        width: 550px;
+        height: 210px;
+    }
+
+    .sosmed-text {
+        font-size: 30px;
+    }
+
+    #footer-kontak .caps-footer-down {
+        margin-top: none;
+        padding-top: 40px;
+    }
+}
+
+/* ========== AKHIR CONTACT PAGES ============ */
+
+
+
+/* =========== FORM MENU ============= */
+.form-menu {
+    margin-top: 150px;
+}
+
+.form-menu h3 {
+    font-family: Roboto-bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #292929;
+    margin-bottom: 30px;
+}
+
+.form-menu .row {
+    margin: auto;
+}
+
+/* Hot Coffee */
+.hot-foto {
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.hot-1 {
+    background-image: url(../img/hitam.png);
+}
+
+.hot-2 {
+    background-image: url(../img/cappucino.png);
+}
+
+.hot-3 {
+    background-image: url(../img/latte.png);
+}
+
+.hot-4 {
+    background-image: url(../img/machalatte.png);
+}
+
+.hot-5 {
+    background-image: url(../img/espresso.png);
+}
+
+.hot-6 {
+    background-image: url(../img/mocha.png);
+}
+
+.form-menu a {
+    text-decoration: none;
+}
+
+.form-menu h6 {
+    padding-top: 10px;
+    font-size: 23px;
+    font-family: Roboto;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #111111;
+}
+
+.hot-foto:hover {
+    -webkit-filter: brightness(0.25);
+    transition: 0.8s;
+}
+
+/* Ice Coffe */
+.ice-cofe {
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 170px;
+    border-radius: 10px;
+}
+
+.ice1 {
+    background-image: url(../img/iced-latte.jpg);
+}
+
+.ice2 {
+    background-image: url(../img/taro.jpg);
+}
+
+.ice3 {
+    background-image: url(../img/redvelvet.png);
+}
+
+.ice4 {
+    background-image: url(../img/iced-cappuccino.png);
+}
+
+.ice-cofe:hover {
+    -webkit-filter: brightness(0.25);
+    transition: 0.8s;
+}
+
+.foodform tr td a {
+    color: rgb(32, 32, 32);
+}
+
+
+
+/* =====Footer==== */
+.content-footer {
+    width: 0 auto;
+    height: 710px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/fotoblendkopi.jpg);
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.foto-bg {
+    width: 50%;
+    height: 710px;
+    background-color: #000;
+    float: right;
+}
+
+.text-footer {
+    color: #F9B464;
+    font-size: 20px;
+}
+
+.caps-footer-right h2,
+.caps-footer-left h2 {
+    font-size: 30px;
+    margin-top: 200px;
+}
+
+.caps-footer-right {
+    margin-left: 35px;
+}
+
+.caps-footer-right p {
+    width: 230px;
+    font-size: 13px;
+}
+
+.footer-down {
+    width: auto;
+    height: 60px;
+    background-color: #1f1f1f;
+}
+
+.caps-footer-down {
+    text-align: center;
+    float: left;
+    color: rgba(172, 172, 172, 0.5);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.caps-footer-down h5 {
+    font-size: 16px;
+    font-family: Roboto;
+}
+
+.medsos {
+    float: right;
+}
+
+.medsos ul li {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    margin-top: 4px;
+    padding-top: 6px;
+    margin-right: 7px;
+}
+
+.medsos a {
+    color: rgba(255, 255, 255, 0.5);
+    animation: berubah 7s 3s infinite;
+}
+
+@keyframes berubah {
+    from {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    to {
+        color: #1d345f;
+    }
+}
+
+.medsos-1:hover {
+    color: rgba(252, 227, 216, 0.856);
+    transition: 0.8s;
+}
+
+.medsos-2:hover {
+    color: rgba(252, 227, 216, 0.856);
+    transition: 0.8s;
+}
+
+.medsos-3:hover {
+    color: rgba(252, 227, 216, 0.856);
+    transition: 0.8s;
+}
+
+.sans:hover {
+    color: rgba(252, 227, 216, 0.856);
+    transition: 0.8s;
+}
+
+/* destkop version */
+@media (min-width: 992px) {
+    .text-footer {
+        color: #F9B464;
+        font-size: 28px;
+    }
+
+    .caps-footer-right h2,
+    .caps-footer-left h2 {
+        font-size: 45px;
+    }
+
+    .caps-footer-right {
+        margin-left: 100px;
+    }
+
+    .caps-footer-right p {
+        width: 322px;
+    }
+
+    .medsos ul li {
+        margin-right: 18px;
+    }
+}

@@ -1,0 +1,156 @@
+/* ====navigation===== */
+.bg-blur {
+    background-color: rgba(37, 37, 37, 0.11);
+}
+
+.navbar {
+    height: 65px;
+}
+
+.navbar-toggler {
+    background-color: #E8B981;
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: 50px;
+}
+
+.nav-link {
+    margin-left: 25px;
+    text-align: center;
+    text-transform: none;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgb(63, 63, 63);
+}
+
+.nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #F6E0BE;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -7px;
+}
+
+.now::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #F6E0BE;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -7px;
+}
+
+/* Desktop Vertion */
+@media (min-width: 992px) {
+    .nav-link {
+        text-transform: uppercase;
+    }
+
+    .navbar {
+        display: flex;
+    }
+}
+
+/* ====akhir navbar==== */
+
+/* utility */
+.btn-tombol {
+    text-transform: uppercase;
+    background: #E8B981;
+    color: #000;
+    border-radius: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+#laoding {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #2C2C2C;
+    border-top-color: #E8B981;
+    border-radius: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: putar 2s linear infinite;
+}
+
+@keyframes putar {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* ====Jumbotron==== */
+.jumbotron-1 {
+    background: linear-gradient(0deg, rgba(233, 233, 233, 0.58), rgba(233, 233, 233, 0.58)), url(../img/fotolatar2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    margin-top: -85px;
+
+}
+
+.jumbotron-1 .display-4-1 {
+    width: 478px;
+    height: 126px;
+    margin-top: 238px;
+    text-transform: uppercase;
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.jumbotron-1 .lead-1 {
+    margin: auto;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #231F1F;
+}
+
+.jumbotron-1 a {
+    text-decoration: none;
+}
+
+.display-4-1:hover {
+    transform: translateY(9px);
+    transition: 0.9s;
+}
+
+.lead-1:hover {
+    transform: translateY(4px);
+    transition: 0.6s;
+}
+
+.ikon-1 img {
+    width: 50px;
+    height: auto;
+    margin-top: 200px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.ikon-1 img:active {
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+
+/* ====akhir jumbotron==== */
